@@ -25,6 +25,6 @@ class Api::TasksController < ApplicationController
 
   private
   def task_params
-    params.fetch(:task, {:name, :is_done})
+    params.fetch(:task, {}).permit(:name, :is_done)
   end
 end
